@@ -5,6 +5,11 @@ import {useState} from 'react';
 
 function SmartCounterDashboard() {
   const [counter, setCount] = useState(0)
+// Increase value by 2
+function addTwo()
+{
+  setCount(counter+2);
+}
   function addValue(){
     // Apply a logic in whcih the counter value can't be greater than 20.
     if(counter<20)
@@ -40,6 +45,7 @@ function SmartCounterDashboard() {
     <br />
     <button onClick={removeValue}>Decrease Value {counter}</button>
     <br /><br />
+    <button onClick={addTwo}>Add Two {counter}</button>
     <button onClick={reset}>Reset Counter</button>
     </>
   )
